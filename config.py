@@ -8,6 +8,8 @@ TG_LINK = os.getenv("TG_LINK")
 ZAPRET_LINK = os.getenv("ZAPRET_LINK")
 AFK_CHANNEL_NAME = "🚽 Уборная"
 DRUNK_ROLE_NAME = "🤪 Напился"
+LOG_CHANNEL_NAME = "n1ka-log"
+ENABLE_LOGGING = True
 
 ROLE_NAMES = [
     "🎲 За игровым столом",
