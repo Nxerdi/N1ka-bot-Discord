@@ -25,3 +25,12 @@ VOICE_ROLE_MAP = {
     "🎥 Кинотеатр": "🎥 В киноуголке",
     "🪖Танки":"🪖В танке"
 }
+
+INTENT_CHANNEL_NAME = "n1ka-log"
+INTENT_LOG_PATH = "data/intent_log.jsonl"
+
+INTENT_TRIGGER_WORDS = [
+    "ника, ",
+    "n1ka, ",
+    "Ника, "
+]

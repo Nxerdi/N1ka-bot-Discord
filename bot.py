@@ -1,5 +1,6 @@
 import discord
 from cogs.events import Events
+from cogs.intent import IntentCog
 from discord.ext import commands
 from config import (
     TOKEN,
@@ -14,6 +15,7 @@ from config import (
 INTENTS = discord.Intents.default()
 INTENTS.members = True
 INTENTS.guilds = True
+INTENTS.message_content = True
 
 bot = commands.Bot(command_prefix="!", intents=INTENTS)
 
@@ -21,7 +23,7 @@ bot = commands.Bot(command_prefix="!", intents=INTENTS)
 @bot.event
 async def on_ready():
     await bot.add_cog(Events(bot))
-
+    await bot.add_cog(IntentCog(bot))
     await bot.change_presence(
         activity=discord.Game(name="🍻 в GameTavern")
     )
